@@ -1,0 +1,1149 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --font-Mont: "Montserrat", sans-serif;
+  --font-NTR: "NTR";
+  --bc: #00304f;
+  --shadow-color: 0px 4px 4px rgba(0, 48, 79, 0.5);
+  --shadow-color-pict: 0px -4px 4px rgba(208, 226, 238, 0.5);
+  --redCol: rgb(177, 0, 0);
+}
+
+/*---------- header - first-page ----------*/
+
+.first_page {
+  background: url(../pictures/back/Untitled-1.jpg) no-repeat center top/cover;
+  height: 1034px;
+}
+
+header {
+  height: 100px;
+  text-align: center;
+}
+
+.nav_head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.burger {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contacts_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: auto 0px;
+  width: 30%;
+}
+
+.contacts_header > a {
+  margin: auto 0px;
+}
+
+.logo_header {
+  width: 30%;
+  transition: 1s;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.logo_header:hover {
+  transition: 1s;
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+.logo_header > img {
+  width: 60%;
+}
+
+.icon_head {
+  width: 24px;
+  height: 24px;
+  margin: auto 0 auto 20px;
+}
+
+.icon_head {
+  cursor: pointer;
+}
+
+.num_head {
+  font-family: var(--font-NTR);
+  font-size: 22px;
+  color: #fff;
+}
+
+.main_content__first-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.description_main {
+  width: 50%;
+  margin: 200px 0;
+  height: 370px;
+  color: #fff;
+  font-family: var(--font-NTR);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.description_main-head {
+  font-size: 36px;
+  line-height: 0vh;
+}
+
+.description_main-text {
+  font-size: 24px;
+}
+
+.watch_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 264px;
+  height: 47px;
+  border-radius: 35px;
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 0.3);
+  transition: 0.5s;
+}
+
+.watch_button:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  background: rgba(72, 126, 176, 0.8);
+}
+
+.watch_button-pict > img {
+  height: 45px;
+}
+
+.watch_button > p {
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  margin: 6px 0px auto auto;
+  font-size: 18px;
+}
+
+.watch_button-play {
+  height: 24px;
+  width: 24px;
+  margin: auto;
+}
+
+.video_main {
+  margin: auto auto;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.video_main > img:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  opacity: 0.6;
+}
+
+.video_main > img {
+  height: 68px;
+  width: 68px;
+  transition: 0.5s;
+}
+
+.video_main__movie {
+  border-radius: 25px;
+  display: none;
+  width: 100%;
+  border: none;
+}
+
+.dispBlock {
+  display: block;
+}
+
+.dispNone {
+  display: none;
+}
+
+/*---------- second page --------*/
+
+.second_page {
+  position: static;
+  width: cover;
+  height: 734px;
+  background: var(--bc);
+}
+
+.head_news > h3 {
+  font-family: "Jomhuria";
+  color: #fff;
+  font-size: 72px;
+  font-weight: 500;
+  padding: 20px 0px;
+}
+
+.content_news {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.content_news-picture > img {
+  width: 110%;
+}
+
+.content_news-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content_news-text > a {
+  padding-top: 20px;
+}
+
+.content_news__text-head {
+  font-size: 72px;
+}
+
+.content_news__text-descr {
+  font-size: 42px;
+}
+
+.content_news__text-head > p,
+.content_news__text-descr {
+  margin: 10px auto;
+  color: #fff;
+  font-family: "Jomhuria";
+  font-weight: 100;
+}
+
+.wb_news {
+  margin: 20px 0;
+}
+
+/*--------- third-page ---------*/
+
+.head_third-page {
+  height: 100%;
+  width: 100%;
+}
+
+.content-block {
+  display: flex;
+  flex-direction: column;
+  background: #00304f;
+  height: 450px;
+  width: 30%;
+  border-radius: 30px;
+  box-shadow: var(--shadow-color);
+  margin: 50px 0px;
+}
+
+.contents_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.content-block_pictures {
+  transition: 1s;
+  overflow: hidden;
+  width: 100%;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.content-block_pictures > img {
+  transition: 1s;
+  width: 100%;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.content-block_pictures img:hover {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transition: 1s;
+  cursor: pointer;
+}
+
+.content-block_content {
+  margin: auto auto;
+  width: 90%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.content-block_content > p {
+  font-family: var(--font-NTR);
+  color: #fff;
+  width: 100%;
+  font-size: 20px;
+  line-height: 100%;
+  font-weight: 400;
+}
+
+.content-block_content__tape {
+  display: flex;
+  flex-direction: row;
+}
+
+.content-block_content__links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.content-block_content__links > p {
+  color: #fff;
+  line-height: 100%;
+  font-size: 20px;
+  font-family: var(--font-NTR);
+}
+
+.content-block_content__links img {
+  transition: 0.5s;
+  width: 100%;
+}
+
+.content-block_content__links > a {
+  width: 11%;
+}
+
+.content-block_content__links img:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  opacity: 0.6;
+}
+
+.icon_posts:hover {
+  cursor: pointer;
+}
+
+/*--------------- 4-th page --------------*/
+
+.slider-picture {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+}
+
+.slider-picture_section {
+  width: 100%;
+  box-shadow: var(--shadow-color-pict);
+}
+
+.slider-picture_section > img {
+  width: 100%;
+  height: 900px;
+  display: none;
+}
+
+.slider-picture_section__line-next {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: -5%;
+}
+
+.next {
+  transition: 0.5s;
+  height: 5px;
+  width: 150px;
+  background-color: #fff;
+  margin-left: 20px;
+  margin-bottom: 60px;
+}
+
+.next:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  opacity: 0.6;
+}
+
+/*---------- 5-th page ------------*/
+
+.movie {
+  margin: auto auto;
+  background-color: var(--bc);
+  width: 100%;
+  height: 800px;
+}
+
+.movie_head > p {
+  padding-top: 10%;
+  font-family: "Jomhuria";
+  font-size: 72px;
+  color: #fff;
+}
+
+.movie_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.movie_video {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.movie_video > iframe {
+  width: 48%;
+}
+
+.movie_video__content {
+  height: 400px;
+  width: 620px;
+}
+
+.movie_video__content > img {
+  width: 100%;
+  height: 100%;
+}
+
+.video-main_under > img {
+  height: 70px;
+  width: 70px;
+  display: flex;
+  flex-direction: row;
+  margin: -230px auto;
+  transition: 0.5s;
+}
+
+.video-main_under > img:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+/*-------- 6-th page -------*/
+
+.posters {
+  background-color: var(--bc);
+}
+
+.posters-line {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.posters-line_post {
+  width: 15%;
+  border-right: 1px solid var(--bc);
+  position: relative;
+  overflow: hidden;
+}
+
+.posters-line_post img {
+  width: 100%;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.posters-line_post img:hover {
+  cursor: pointer;
+  opacity: 1;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/*---------- 7-th page -----------*/
+
+.advertising {
+  padding: auto;
+  justify-content: center;
+  height: 200%;
+  background-color: var(--bc);
+}
+
+.advert {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.advert-company {
+  margin: auto auto;
+  width: 33%;
+}
+
+.advert-company img:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.advert-company img {
+  opacity: 0.6;
+  width: 100%;
+}
+
+/*------- footer --------*/
+
+.foot {
+  background-color: #252525;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.foot-con {
+  padding: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.foot-logo {
+  display: flex;
+  margin: 0px auto;
+  justify-content: center;
+  width: 400px;
+}
+
+.foot-logo img {
+  margin: auto 0px;
+  width: 100%;
+}
+
+.foot-text {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-family: "Jomhuria";
+  margin: 20px auto;
+  font-size: 72px;
+}
+
+.foot-contacts_con {
+  width: 45%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+
+.foot-contacts_con img {
+  width: 166px;
+  height: 166px;
+}
+
+.foot-contacts_num__scroll {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fcns-img {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.foot-contacts_num__scroll > p {
+  color: #fff;
+  font-family: var(--font-NTR);
+  font-size: 30px;
+  width: 58.5%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0px;
+}
+
+.foot-contacts_num__scroll img {
+  width: 80px;
+  height: 80px;
+  transition: 1s;
+  border-radius: 355px;
+  box-shadow: none;
+}
+
+.foot-contacts_num__scroll img:hover {
+  cursor: pointer;
+  transition: 1s;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  box-shadow: 0px 0px 2px #fff;
+}
+
+.year {
+  width: 3.5%;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+
+.year > img {
+  width: 9px;
+  height: 9px;
+  margin: 5px 0px;
+}
+
+.year > p {
+  color: #fff;
+  font-family: "Jomhuria";
+  font-size: 24px;
+}
+
+.foot-logo img:hover,
+.foot-contacts_con img:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/*---------------------------------------------*/
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+.burger__links a {
+  display: none;
+}
+
+.showNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+  background-color: var(--bc);
+}
+
+.pt-5 {
+  position: absolute;
+  z-index: 2;
+  top: 8%;
+  left: 8%;
+}
+
+.pt-5:hover {
+  cursor: pointer;
+}
+
+.pt-5 li {
+  transition: 1s;
+  position: static;
+  height: 3px;
+  width: 30px;
+  margin: 0 0 7px 0;
+  background-color: #fff;
+}
+
+.showMenu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-family: var(--font-NTR);
+  height: 100%;
+  justify-content: center;
+}
+
+.showMenu a {
+  display: block;
+  margin: 0px auto;
+  transition: 0.5s;
+  font-size: 72px;
+  line-height: 130%;
+  font-family: var(--font-Mont);
+  font-weight: 600;
+}
+
+.showMenu a:hover {
+  transition: 0.5s;
+  cursor: pointer;
+  color: darkorange;
+}
+
+/* ---------------- sign-page ----------------- */
+
+.main-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: url(../pictures/back/sign1.jpg) no-repeat center top/cover;
+}
+
+.main-page__sign-form {
+  width: 45%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
+  margin: auto;
+}
+
+.btn-sign {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  color: #e9e9e9;
+  font-weight: 600;
+  font-size: 50px;
+  transition: 0.5s;
+}
+
+.btn-sign:hover {
+  transition: 0.5s;
+  color: #0367a6;
+  cursor: pointer;
+}
+
+.form-Up,
+.form-In {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto 0px;
+  background-color: #e9e9e9;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  animation: show 1s 1;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.con-form {
+  width: 100%;
+  height: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 16px;
+  text-align: center;
+}
+
+.main-page__sign-form_content {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+.btn {
+  background-color: #0367a6;
+  background-image: linear-gradient(90deg, #0367a6 0%, #008997 74%);
+  border-radius: 25px;
+  border: 1px solid #0367a6;
+  color: #e9e9e9;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  padding: auto;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  width: 60%;
+  height: 15%;
+  margin: 0px auto;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.form__title {
+  height: 15%;
+}
+
+.form__title>h2 {
+  font-family: var(--font-NTR);
+  font-weight: 900;
+  height: 100%;
+}
+
+.con-form > a {
+  font-family: var(--font-NTR);
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.input {
+  background-color: #fff;
+  border: none;
+  width: 90%;
+  height: 13%;
+  margin: 5px auto;
+}
+
+/* ----------- buy-ticket page ------------ */
+
+.logo {
+  width: 100%;
+  height: 200px;
+  background-color: var(--bc);
+  display: flex;
+  justify-content: center;
+}
+
+.logo > img {
+  width: 20%;
+  height: 100%;
+}
+
+.matches {
+  width: 90%;
+  margin: 0px auto;
+}
+
+.matches > h1 {
+  margin: 50px auto;
+  font-family: "Jomhuria";
+  color: #00304f;
+  font-size: 72px;
+  font-weight: 500;
+  line-height: 0vh;
+}
+
+.matches__block {
+  margin: 0px auto;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.matches__block_match {
+  width: 30%;
+  height: 100%;
+  background-color: var(--bc);
+  display: flex;
+  flex-direction: column;
+}
+
+.matches__block_match:hover {
+  cursor: pointer;
+}
+
+.matches__block_match img {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  position: relative;
+  z-index: 3;
+}
+
+.matches__block_match img:hover {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transition: 0.5s;
+}
+
+.matches__block_match > p {
+  margin: auto auto;
+  color: #fff;
+  font-family: "Jomhuria";
+  font-size: 32px;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+.matches__block_match > p:hover {
+  transition: 0.5s;
+  color: var(--redCol);
+}
+
+.speedway-tickets {
+  margin-top: 50px;
+  width: 100%;
+  height: 700px;
+  background-color: var(--bc);
+}
+
+.pict-ticket {
+  position: relative;
+  overflow: hidden;
+  height: 70%;
+}
+
+.speedway {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bc);
+  display: flex;
+  justify-content: center;
+}
+
+.speedway-container {
+  width: 90%;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.speedway__descr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.speedway h3 {
+  color: #fff;
+  font-family: "Jomhuria";
+  font-size: 60px;
+  font-weight: 500;
+}
+
+.speedway__track_content {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.speedway__track {
+  height: 100%;
+  width: 100%;
+}
+
+.speedway__track > img {
+  height: 100%;
+  width: 100%;
+}
+
+.speedway__add-to-basket {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0px 20px;
+  height: 100%;
+  width: 25%;
+}
+
+.num-track {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.num-track > button {
+  color: #fff;
+  font-family: "Jomhuria";
+  font-weight: 500;
+  font-size: 60px;
+}
+
+.num-track > button:hover {
+  cursor: pointer;
+}
+
+.amount-track__ticket {
+  width: 100%;
+  height: 80%;
+  background-color: #fff;
+}
+
+.amount-track__ticket_tick {
+  width: 20%;
+  height: 100%;
+}
+
+.ticket_column {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticket-place {
+  width: 20%;
+  height: 3%;
+  background-color: #00304f;
+  margin: 5px;
+  color: #fff;
+  font-size: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticket-place:hover {
+  cursor: pointer;
+}
+
+.ticket-place::before {
+  content: attr(data-place);
+}
+
+.choseTicket {
+  background-color: var(--redCol);
+}
+
+.amount-track__ticket {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tickets__tick {
+  position: relative;
+  width: 100%;
+  height: 88%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.tickets__tick_scroll {
+  position: relative;
+  overflow: scroll;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tickets {
+  width: 25%;
+  height: 100%;
+}
+
+.tickets > form {
+  width: 100%;
+  height: 89%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tickets button {
+  font-size: 40px;
+  font-family: "Jomhuria";
+  font-weight: 300;
+}
+
+.tickets button {
+  width: 50%;
+  border-radius: 25px;
+  background-color: #fff;
+  color: #00304f;
+  transition: 0.5s;
+}
+
+.tickets button:hover {
+  transition: 0.5s;
+  cursor: pointer;
+  color: var(--redCol);
+}
+
+.tickets__tick > p {
+  font-family: "Jomhuria";
+  font-size: 40px;
+  font-weight: 500;
+  color: #00304f;
+  margin: 5px auto;
+}
+
+.colorNum {
+  color: var(--redCol);
+}
+
+.tick__bask {
+  top: 30px;
+  left: 0;
+  height: 18%;
+  width: 90%;
+  margin: 5px auto;
+  background-color: #00404f;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.tick__bask_info {
+  width: 60%;
+}
+
+.tick__bask h3 {
+  margin: auto auto;
+  font-family: "Jomhuria";
+  color: var(--redCol);
+  font-size: 3em;
+  font-weight: 300;
+  line-height: 100%;
+}
+
+.tick__bask_info p {
+  margin: -5% auto auto auto;
+  font-family: "Jomhuria";
+  color: #fff;
+  font-size: 2em;
+  font-weight: 300;
+}
+
+.exit {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.exit>p {
+  color: #fff;
+  font-weight: 300;
+}
+
+.tick__bask_price>p {
+  height: 50%;
+  width: 100%;
+  font-family: "Jomhuria";
+  color: #fff;
+  font-size: 2em;
+  font-weight: 300;
+}
+
+.exit>p {
+  font-family: var(--font-Mont);
+}
+
+
