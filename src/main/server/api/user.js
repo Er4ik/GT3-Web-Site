@@ -1,5 +1,11 @@
 'use strict';
 
 (req, res) => {
-    res.json(req.body);
+    try {  
+        res.send(req.body);
+    }
+    catch {
+        res.send('bad response :(')
+    }
+    
 }

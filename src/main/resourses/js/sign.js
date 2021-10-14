@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const signUp = new SignUpForm();
 
   const submitUpForm = document.getElementById('sign-up-form');
-  const url = "https://web-site-auto.vercel.app/";
+  const url = "https://gt-3-web-site-server.vercel.app/api";
 
   const HttpMethods = {
     get: 'GET',
@@ -109,17 +109,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   async function subData(url, method = HttpMethods.get, data) {
-    const res = await fetch(`${url}${apiRoutes.user}`, 
+    return await fetch(`${url}${apiRoutes.user}`, 
       {
         headers: {
           'Accept': 'application/json',
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
         method: method,
         body: JSON.stringify(data)
       })
-
-      return res;
   }
 
   submitUpForm.addEventListener('submit', (event) => {
@@ -128,9 +126,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const valid = signUp.checkForm();
 
     if(valid.result) {
-      async () => {
-        await subData(url, HttpMethods.post, valid.body).then(console.log(body));
+      const res = async () => {
+        await subData(url, HttpMethods.post, valid.body);
       }
+
+      console.log(res());
     }
   })
 });
