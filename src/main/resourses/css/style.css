@@ -252,6 +252,10 @@ header {
   margin: 50px 0px;
 }
 
+.contents {
+  display: block;
+}
+
 .contents_row {
   display: flex;
   flex-direction: row;

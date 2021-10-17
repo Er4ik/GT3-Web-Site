@@ -18,3 +18,9 @@ export const port = {
 export const pathToDirFile = {
     staticFiles: '../../resourses',
 } 
+
+export const dataRx = {
+    Namerx: /\w \w/,
+    Emailrx: /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$/,
+    Passwordrx: /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}/g,
+}

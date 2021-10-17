@@ -31,66 +31,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   class SignUpForm {
     constructor() {
-      this.dataRx = {
-        namerx: /\w \w/,
-        emailrx: /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$/,
-        passrx: /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}/g,
-      }
-
       this.colorInput = {
         error: '1px solid red',
         ok: '1px solid green',
       }
-
-      this.inButPlaceholders = {
-        name: 'Name',
-        email: 'Email',
-        pass: 'Password',
-      }
-    }
-
-    changeColBut(but) {
-      console.log(but);
-      document.querySelector(`.form-Up ${but}`).style.border = this.colorInput.error;
-    }
- 
-    testValid(btn, rx) {
-      return rx.test(btn.value);
-    }
-
-    validation(but, rx) {
-      let res = true;
-
-      if(but.placeholder === this.inButPlaceholders.name) {
-        res = this.testValid(but, rx.namerx);
-      }
-      else if(but.placeholder === this.inButPlaceholders.email) {
-        res = this.testValid(but, rx.emailrx);
-      }
-      else {
-        res = this.testValid(but, rx.passrx);
-      }
-
-      return res;
     }
 
     checkForm() {
       const data = document.querySelectorAll('.form-Up input');
       const body = {};
-      let res = true;
 
       for(let elem = 0; elem < data.length; elem++) {
-        res = this.validation(data[elem], this.dataRx);
-
         body[data[elem].placeholder] = data[elem].value;
-
-        if(!res) {
-          data[elem].style.border = this.colorInput.error;
-          break;
-        } else data[elem].style.border = this.colorInput.ok; 
       }
 
-      return {result: res, body: body};
+      return {body: body};
     }
   }
 
@@ -119,8 +74,8 @@ document.addEventListener("DOMContentLoaded", () => {
         body: JSON.stringify(data)
       });
 
-      const resData = await res.json().catch(warn => {
-        throw new Error(`Server response Error - ${warn}`);
+      const resData = await res.json().catch(error => {
+        throw new Error(`Server response Error - ${error}`);
       });
 
       return resData;
@@ -129,14 +84,12 @@ document.addEventListener("DOMContentLoaded", () => {
   submitUpForm.addEventListener('submit', (event) => {
     event.preventDefault;
 
-    const valid = signUp.checkForm();
-
-    if(valid.result) {
-      const res = async () => {
-        await subData(url, HttpMethods.post, valid.body);
-      }
-
-      res();
+    const check = signUp.checkForm();
+    
+    const res = async () => {
+      await subData(url, HttpMethods.post, check.body);
     }
+
+    res();
   })
 });
