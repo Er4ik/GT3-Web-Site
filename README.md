@@ -2,4 +2,4 @@
 
 ## Technology stack:
 
-_HTML5, CSS3, JavaScript_
+_HTML5, CSS3, JavaScript, express.js, ejs_
