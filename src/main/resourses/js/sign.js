@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
           break;
         } else data[elem].style.border = this.colorInput.ok; 
       }
-      
+
       return {result: res, body: body};
     }
   }
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const signUp = new SignUpForm();
 
   const submitUpForm = document.getElementById('sign-up-form');
-  const url = "https://gt-3-web-site-server.vercel.app/api";
+  const url = "http://localhost:3000";
 
   const HttpMethods = {
     get: 'GET',
@@ -105,11 +105,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const apiRoutes = {
-    user: '/user',
+    user: '/authorization',
   }
 
   async function subData(url, method = HttpMethods.get, data) {
-    return await fetch(`${url}${apiRoutes.user}`, 
+    const res = await fetch(`${url}${apiRoutes.user}`,
       {
         headers: {
           'Accept': 'application/json',
@@ -117,7 +117,13 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         method: method,
         body: JSON.stringify(data)
-      })
+      });
+
+      const resData = await res.json().catch(warn => {
+        throw new Error(`Server response Error - ${warn}`);
+      });
+
+      return resData;
   }
 
   submitUpForm.addEventListener('submit', (event) => {
@@ -130,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
         await subData(url, HttpMethods.post, valid.body);
       }
 
-      console.log(res());
+      res();
     }
   })
 });
