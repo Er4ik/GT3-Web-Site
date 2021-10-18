@@ -17,6 +17,6 @@ export const respButTick = (req, res) => {
 export const authorize = (req, res) => {
     const result = check(dataRx, req.body);
 
-    if(result.result) res.status(201).json(req.body);
-    else res.status(201).json({ response: "Incorrect values in input fields", "wrong-button": result.key});
+    if(result.result) res.status(201).json({ response: "Correct values in inpput fields", key: result.result, respBody: req.body});
+    else res.status(201).json({ response: "Incorrect values in input fields", key: result.result, respBody: result.key});
 }

@@ -31,19 +31,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
   class SignUpForm {
     constructor() {
-      this.colorInput = {
-        error: '1px solid red',
-        ok: '1px solid green',
+      this.formTitle = document.querySelector('.form__title');
+      
+      this.correctlyInput = {
+        error: "Incorrect values:",
+        ok: "Accepted",
+        classErr: "redIn",
+        classOk: "greenIn"
       }
     }
 
-    checkForm() {
-      const data = document.querySelectorAll('.form-Up input');
-      const body = {};
+    createHtml(text, className, ...data) {
+      const html = `
+        <h2 class=${className}>${text} ${data}<h2>
+      `
+      return html;
+    }
 
-      for(let elem = 0; elem < data.length; elem++) {
-        body[data[elem].placeholder] = data[elem].value;
+    changeTitle(key, ...values) {
+      let html;
+      if(!key) html = this.createHtml(this.correctlyInput.error, this.correctlyInput.classErr, values);
+      else html = this.createHtml(this.correctlyInput.ok, this.correctlyInput.classOk);
+      this.formTitle.innerHTML = html;
+    }
+
+    okFields() {
+      const html = this.createHtml(this.correctlyInput.ok, this.correctlyInput.classOk);
+      this.formTitle.innerHTML = html;
+    }
+
+    createRequestData(form, elem, body) {
+      return body[form[elem].placeholder] = form[elem].value;
+    }
+
+    iterOnForm(callback, val, ...data) {
+      const form = document.querySelectorAll('.form-Up input');
+      for(let elem = 0; elem < form.length; elem++) {
+        callback(form, elem, val, data);
       }
+    }
+
+    prepareForm() {
+      const body = {};
+      this.iterOnForm(this.createRequestData, body);
 
       return {body: body};
     }
@@ -72,24 +102,31 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         method: method,
         body: JSON.stringify(data)
+      })
+
+    const result = res.json()
+      .then(respData => respData)
+      .catch(error => {
+        throw new Error(`Server response Error -> ${error}`);
       });
 
-      const resData = await res.json().catch(error => {
-        throw new Error(`Server response Error - ${error}`);
-      });
-
-      return resData;
+    return result;
   }
 
   submitUpForm.addEventListener('submit', (event) => {
     event.preventDefault;
 
-    const check = signUp.checkForm();
+    const check = signUp.prepareForm();
     
     const res = async () => {
-      await subData(url, HttpMethods.post, check.body);
+      const data = await subData(url, HttpMethods.post, check.body);
+      return data;
     }
 
-    res();
+    res()
+      .then(res => {
+        console.log(res.response);
+        signUp.changeTitle(res.key, res.respBody);
+      })
   })
 });

@@ -15,16 +15,18 @@ class signUpForm extends checkForm {
     }
 
     validation() {
-        let res = true;
-        let valKey;
+        let flag = true;
+        const body = [];
 
         for(const key in this.data) {
-            res = this.testValid(this.rx[`${key}rx`], this.data[key]);
-            valKey = key;
-            if(!res) break;
+            const res = this.testValid(this.rx[`${key}rx`], this.data[key]);
+            
+            if(!res) {
+                flag = false;
+                body.push(key);
+            }
         }
-
-        return {result: res, key: valKey};
+        return {result: flag, key: body};
     }
 }
 
